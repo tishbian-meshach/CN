@@ -10,9 +10,9 @@ class Server {
             Socket socket = serverSocket.accept();
             System.out.println("Client connected");
 
-            PrintWriter output = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
-            BufferedReader clientinput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            BufferedReader userinput = new BufferedReader(new InputStreamReader(System.in));
+            PrintStream output = new PrintStream(socket.getOutputStream());
+            DataInputStream clientinput = new DataInputStream(socket.getInputStream());
+            DataInputStream userinput = new DataInputStream(System.in);
 
             while (true) {
                 String clientMessage = clientinput.readLine();
