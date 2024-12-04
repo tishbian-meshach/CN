@@ -5,7 +5,7 @@ class Client {
     public static void main(String args[]) {
 
         try {
-            Socket socket = new Socket(InetAddress.getLocalHost(), 4000);
+            Socket socket = new Socket("localhost",Server.PORT);
             PrintStream output = new PrintStream(socket.getOutputStream());
             DataInputStream serverinput = new DataInputStream(socket.getInputStream());
             DataInputStream userinput = new DataInputStream(System.in);
