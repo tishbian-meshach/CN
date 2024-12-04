@@ -33,9 +33,7 @@ public class Download {
             inputStream.close();
             outputStream.close();
             System.out.println("File downloaded successfully: " + fileName);
-        } catch (IOException e) {
-            System.out.println("IOException: " + e.getMessage());
-        } catch (Exception e) {
+        }catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
     }
