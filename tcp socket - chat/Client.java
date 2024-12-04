@@ -6,9 +6,9 @@ class Client {
 
         try {
             Socket socket = new Socket(InetAddress.getLocalHost(), 4000);
-            PrintWriter output = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
-            BufferedReader serverinput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            BufferedReader userinput = new BufferedReader(new InputStreamReader(System.in));
+            PrintStream output = new PrintStream(socket.getOutputStream());
+            DataInputStream serverinput = new DataInputStream(socket.getInputStream());
+            DataInputStream userinput = new DataInputStream(System.in);
 
             System.out.println("Type 'end' to Quit");
 
