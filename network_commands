@@ -1,0 +1,11 @@
+sudo tcpdump -i ens33
+
+netstat
+
+ipconfig
+
+nslookup google.com
+
+tracert google.com
+
+ping google.com
