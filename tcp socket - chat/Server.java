@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.*;
 
 class Server {
+    public static final int PORT = 4000;
     public static void main(String args[]) {
 
         try {
